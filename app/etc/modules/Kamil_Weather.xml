@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Kamil_Weather>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Kamil_Weather>
+  </modules>
+</config>

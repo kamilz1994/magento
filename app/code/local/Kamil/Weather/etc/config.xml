@@ -1,0 +1,51 @@
+<config>    
+<modules>
+    <Kamil_Weather>
+        <version>0.1.0</version>
+    </Kamil_Weather>
+</modules>
+<frontend>
+    <routers>
+        <weather>
+            <use>standard</use>
+            <args>
+                <module>Kamil_Weather</module>
+                <frontName>weather</frontName>
+            </args>
+        </weather>
+    </routers> 
+</frontend>
+<global>
+    <blocks>
+      <weather>
+        <class>Kamil_Weather_Block</class>
+      </weather>
+    </blocks>
+    <models>
+        <weather>
+            <class>Kamil_Weather_Model</class>
+            <resourceModel>weather_mysql4</resourceModel>
+        </weather>
+        <weather_mysql4>
+            <class>Kamil_Weather_Model_Mysql4</class>
+            <entities>
+                <weathermodel>
+                    <table>weather</table>
+                </weathermodel>
+            </entities>
+        </weather_mysql4>
+    </models>
+    <resources>
+        <weather_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </weather_write>
+        <weather_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </weather_read>
+    </resources>
+</global>
+</config>

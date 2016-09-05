@@ -1,0 +1,16 @@
+<div id="dataWeather">
+<h2>Aktualne dane pogodowe dla miasta Lublin!</h2>
+<p>Dane są aktualizowane co 10min.</p>
+
+<?php
+
+$data = $this->getdataweather();
+echo "<br>Temperatura: <span id='temp'>".$data['temp']."</span> C<br>";
+echo "Ciśnienie: <span id='pressure'>".$data['pressure']."</span> hPa<br>";
+echo "Prędkość wiatru: <span id='wind'>".$data['wind']."</span> km/h<br>";
+echo "<p> Ostatnia aktualizacja: <span id='lastDate'>".$data['time']."</span><br>";
+echo "<span id='timer'></span>";
+
+?>
+
+</div>
