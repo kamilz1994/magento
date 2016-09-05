@@ -20,7 +20,6 @@ $(document).ready(function (){
 					t.html(args.temp);
 					p.html(args.pressure);
 					w.html(args.wind);
-					l.html(getDateTimeString());
 					location.reload();
 				}  
 			});
@@ -65,29 +64,3 @@ $(document).ready(function (){
 		}
 
 });
-
-
-function getDateTimeString(){
-	var dateNow = new Date();
-	var day = dateNow.getDate();
-	var month = dateNow.getMonth();
-	var year = dateNow.getFullYear();
-
-	var second = dateNow.getSeconds();
-	var minute = dateNow.getMinutes();
-	var hour = dateNow.getHours();
-
-	if(day<10)
-		day="0"+day;
-	if(month<10)
-		month="0"+month;
-	if(second<10)
-		second="0"+second;
-	if(minute<10)
-		minute="0"+minute;
-	if(hour<10)
-		hour="0"+hour;
-	var readyString = year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second;
-
-	return readyString;
-}
