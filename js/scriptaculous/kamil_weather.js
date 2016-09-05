@@ -6,20 +6,12 @@ $(document).ready(function (){
 
 	if(dateNow >= dateLast || last == ""){
 		$(function(){
-			var t = $('#dataWeather #temp');
-			var p = $('#dataWeather #pressure');
-			var w = $('#dataWeather #wind');
-			var l = $('#dataWeather #lastDate');
-
 			
 			$.ajax({  
 				type: 'POST',  
 				url: 'update',
 				dataType: 'json',  
 				success: function(args) {
-					t.html(args.temp);
-					p.html(args.pressure);
-					w.html(args.wind);
 					location.reload();
 				}  
 			});
@@ -45,10 +37,6 @@ $(document).ready(function (){
 			        if( count <= 0)
 			        {
 					    clearInterval(counter);
-					    var t = $('#dataWeather #temp');
-						var p = $('#dataWeather #pressure');
-						var w = $('#dataWeather #wind');
-						var l = $('#dataWeather #lastDate');
 
 			            $.ajax({  
 						    type: 'POST',  
